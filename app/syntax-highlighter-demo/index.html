@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="graphPlotterDemoApp">
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sancsoft Syntax Highlighter for AngularJS - Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body ng-controller="graphPlotterDemoCtrl">
+<!--<input type="number" ng-model="(graphPlots[0].y)[0]">-->
+<line-plot graph-plots=graphPlots></line-plot>
+
+<script src="../shared/my-graph-plotter/jquery-latest.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../shared/my-graph-plotter/d3.v3.min.js"></script>
+<script src="../shared/my-graph-plotter/plotly.min.js"></script>
+<script src="../shared/my-graph-plotter/graph-plotter.js"></script>
+<script src="graph-plotter-app.js"></script>
+</body>
+</html>

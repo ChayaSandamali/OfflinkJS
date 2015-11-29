@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="myApp.forms">
+<head>
+    <!--<link rel="prefetch" href="https://wallpaperscraft.com/image/meerkats_three_family_animals_29586_3840x2160.jpg"> &lt;!&ndash; Firefox &ndash;&gt;-->
+</head>
+<body>
+<!--<a href="https://wallpaperscraft.com/image/meerkats_three_family_animals_29586_3840x2160.jpg">Example</a>-->
+<!-- Example form from HTML5 spec http://www.w3.org/TR/html5/forms.html#writing-a-form's-user-interface -->
+<form method="post" ng-controller="PizzaCtrl" name="pizzaOrderForm">
+    <p><label>Customer name: <input name="custname" ng-model="order.custname"></label></p>
+
+    <!--<p><label>Telephone: <input type=tel name="custtel" ng-model="order.custtel"></label></p>-->
+
+    <!--<p><label>E-mail address: <input type=email name="custemail" ng-model="order.custemail"></label></p>-->
+    <!--<fieldset>-->
+    <!--<legend> Pizza Size</legend>-->
+    <!--<p><label> <input type=radio name=size value="small" ng-model="order.size"> Small </label></p>-->
+
+    <!--<p><label> <input type=radio name=size value="medium" ng-model="order.size"> Medium </label></p>-->
+
+    <!--<p><label> <input type=radio name=size value="large" ng-model="order.size"> Large </label></p>-->
+    <!--</fieldset>-->
+    <!--<fieldset>-->
+    <!--<legend> Pizza Toppings</legend>-->
+    <!--<p><label> <input type=checkbox name="topping" value="bacon" ng-model="order.topping.bacon"> Bacon </label></p>-->
+
+    <!--<p><label> <input type=checkbox name="topping" value="cheese" ng-model="order.topping.cheese"> Extra Cheese-->
+    <!--</label>-->
+    <!--</p>-->
+
+    <!--<p><label> <input type=checkbox name="topping" value="onion" ng-model="order.topping.onion"> Onion </label></p>-->
+
+    <!--<p><label> <input type=checkbox name="topping" value="mushroom" ng-model="order.topping.mushroom"> Mushroom-->
+    <!--</label></p>-->
+    <!--</fieldset>-->
+    <!--<p>-->
+    <!--<label>-->
+    <!--Del. time:-->
+    <!--<input type="time" name="delivery" ng-model="order.delivery.value"-->
+    <!--placeholder="HH:mm:ss" min="08:00:00" max="17:00:00"/>-->
+    <!--</label>-->
+    <!--</p>-->
+
+    <!--<p><label>Delivery instructions: <textarea name="comments" ng-model="order.comments"></textarea></label></p>-->
+
+    <p>
+        <button type="submit" ng-click="orderSubmitWithCache()">Submit With Cache</button>
+        <button type="submit" ng-click="orderSubmitWithoutCache()">Submit Without Cache</button>
+        <button type="submit" ng-click="getConnectionStat()">Reg Cb</button>
+    </p>
+    <div id="con_status">{{connectionStatus}}</div>
+    <div>{{connectionStat}}</div>
+    <pre>
+        {{result | json}}
+        <!--Delivery Details :-->
+        <!--{{order.custname}}-->
+        <!--{{order.custtel}}-->
+        <!--{{order.custemail}}-->
+        <!--{{order.size}}-->
+        <!--{{order.topping.bacon}}-->
+        <!--{{order.topping.cheese}}-->
+        <!--{{order.topping.onion}}-->
+        <!--{{order.topping.mushroom}}-->
+        <!--{{order.delivery.value | date: "HH:mm:ss"}}-->
+        <!--{{order.comments}}-->
+    </pre>
+
+</form>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="../shared/offlinkJs/offlinksJs.js"></script>
+<script src="PizzaOrder.js"></script>
+</body>
+</html>
